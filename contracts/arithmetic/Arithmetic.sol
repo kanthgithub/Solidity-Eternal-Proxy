@@ -5,7 +5,7 @@ import './ArithmeticStorage.sol';
 contract Arithmetic is ArithmeticStorage {
 
     event addEvent(uint256 indexed sum, uint256 a, uint256 b);
-    event substractEvent(uint256 indexed substract, uint256 a, uint256 b);
+    event subtractEvent(uint256 indexed substract, uint256 a, uint256 b);
      string public name;
      uint256 private result;
 
@@ -19,9 +19,9 @@ contract Arithmetic is ArithmeticStorage {
         return result;
     }
 
-    function substract(uint256 a, uint256 b) public returns(uint256) {
+    function subtract(uint256 a, uint256 b) public returns(uint256) {
         result = a-b;
-        emit substractEvent(result,a,b);
+        emit subtractEvent(result,a,b);
         return result;
     }
 }

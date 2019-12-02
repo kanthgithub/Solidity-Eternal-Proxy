@@ -17,6 +17,4 @@ contract Proxy {
       default { return(ptr, size) }
     }
   }
-
-
 }
