@@ -25,11 +25,29 @@
 ```
 User ---- tx --- ArithmeticProxy
                         |
-                        | ----------> Arithmetic_v0
+                        | ----------> Arithmetic
                         |
                         |-----------> Arithmetic_v1
                         |
                         |-----------> Arithmetic_v2
+```
+
+```
+    =========================     ============================     -------     =======================
+    ║  ArithmeticStorage     ║   ║ UpgradeabilityOwnerStorage ║   | Proxy |   ║ UpgradeabilityStorage ║
+     =========================     ============================     -------     =======================
+              ↑            ↑                            ↑                ↑            ↑
+              |            |                            |            ---------------------
+          ----------       |                            |           | UpgradeabilityProxy |
+         | Arithmetic |    |                            |            ---------------------
+          ----------       |                            |               ↑
+              ↑            |                       --------------------------
+              |            |                      | OwnedUpgradeabilityProxy |
+          --------------   |                       --------------------------
+         | Arithmetic_v1|  |                             ↑
+          --------------   |______ -------------------------
+                                  | ArithmeticStorageProxy |
+                                   -------------------------
 ```
 
 ## Proxy Contract:
