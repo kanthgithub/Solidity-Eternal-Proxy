@@ -48,3 +48,5 @@ User ---- tx --- ArithmeticProxy
 
 - Open-zeppelin SDK for Proxy contracts (Updated):
   https://docs.openzeppelin.com/sdk/2.6/pattern.html
+
+- https://ethereum.stackexchange.com/questions/50671/upradeable-proxy-library-throws-on-any-function-how-to-connect-proxy-and-mainco  
