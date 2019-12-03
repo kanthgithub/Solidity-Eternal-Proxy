@@ -1,0 +1,173 @@
+{
+  "contractName": "ArithmeticAdvancedStorage",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "result",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.1+commit.c8a2cb62\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"result\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/lakshmikanth/Documents/DefiZap/Solidity-Eternal-Proxy/contracts/advanced/ArithmeticAdvancedStorage.sol\":\"ArithmeticAdvancedStorage\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/lakshmikanth/Documents/DefiZap/Solidity-Eternal-Proxy/contracts/advanced/ArithmeticAdvancedStorage.sol\":{\"keccak256\":\"0x534bc0bbf18062d1e2408842de8a9ffe3974c60bad89741dae00f9a55443f814\",\"urls\":[\"bzzr://d37f849998553f57f76f192a4eb01be8fd4207fca442025bcdbd44d6e24efba5\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b5060988061001e6000396000f3fe6080604052600436106039576000357c0100000000000000000000000000000000000000000000000000000000900480636537214714603e575b600080fd5b348015604957600080fd5b5060506066565b6040518082815260200191505060405180910390f35b6000548156fea165627a7a72305820b010e27e4737021cdc2d39b66347dfa35b9fa03684786ab888472ed1b174ed6b0029",
+  "deployedBytecode": "0x6080604052600436106039576000357c0100000000000000000000000000000000000000000000000000000000900480636537214714603e575b600080fd5b348015604957600080fd5b5060506066565b6040518082815260200191505060405180910390f35b6000548156fea165627a7a72305820b010e27e4737021cdc2d39b66347dfa35b9fa03684786ab888472ed1b174ed6b0029",
+  "sourceMap": "25:65:2:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;25:65:2;;;;;;;",
+  "deployedSourceMap": "25:65:2:-;;;;;;;;;;;;;;;;;;;;;;66:21;;8:9:-1;5:2;;;30:1;27;20:12;5:2;66:21:2;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity ^0.5.1;\n\ncontract ArithmeticAdvancedStorage {\n    uint256 public result;\n}",
+  "sourcePath": "/Users/lakshmikanth/Documents/DefiZap/Solidity-Eternal-Proxy/contracts/advanced/ArithmeticAdvancedStorage.sol",
+  "ast": {
+    "absolutePath": "/Users/lakshmikanth/Documents/DefiZap/Solidity-Eternal-Proxy/contracts/advanced/ArithmeticAdvancedStorage.sol",
+    "exportedSymbols": {
+      "ArithmeticAdvancedStorage": [
+        111
+      ]
+    },
+    "id": 112,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 108,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".1"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:2"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 111,
+        "linearizedBaseContracts": [
+          111
+        ],
+        "name": "ArithmeticAdvancedStorage",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 110,
+            "name": "result",
+            "nodeType": "VariableDeclaration",
+            "scope": 111,
+            "src": "66:21:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 109,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "66:7:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 112,
+        "src": "25:65:2"
+      }
+    ],
+    "src": "0:90:2"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/lakshmikanth/Documents/DefiZap/Solidity-Eternal-Proxy/contracts/advanced/ArithmeticAdvancedStorage.sol",
+    "exportedSymbols": {
+      "ArithmeticAdvancedStorage": [
+        111
+      ]
+    },
+    "id": 112,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 108,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".1"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:2"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 111,
+        "linearizedBaseContracts": [
+          111
+        ],
+        "name": "ArithmeticAdvancedStorage",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 110,
+            "name": "result",
+            "nodeType": "VariableDeclaration",
+            "scope": 111,
+            "src": "66:21:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 109,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "66:7:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 112,
+        "src": "25:65:2"
+      }
+    ],
+    "src": "0:90:2"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.1+commit.c8a2cb62.Linux.g++"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.18",
+  "updatedAt": "2019-12-03T19:24:37.349Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

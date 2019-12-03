@@ -1,0 +1,506 @@
+{
+  "contractName": "ArithmeticProxy",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "name",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "a",
+          "type": "uint256"
+        },
+        {
+          "name": "b",
+          "type": "uint256"
+        }
+      ],
+      "name": "subtract",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "version",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "version",
+          "type": "string"
+        },
+        {
+          "name": "implementation",
+          "type": "address"
+        }
+      ],
+      "name": "upgradeTo",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "implementation",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "a",
+          "type": "uint256"
+        },
+        {
+          "name": "b",
+          "type": "uint256"
+        }
+      ],
+      "name": "add",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_name",
+          "type": "string"
+        }
+      ],
+      "name": "initialize",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "fallback"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "version",
+          "type": "string"
+        },
+        {
+          "indexed": true,
+          "name": "implementation",
+          "type": "address"
+        }
+      ],
+      "name": "Upgraded",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "sum",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "a",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "b",
+          "type": "uint256"
+        }
+      ],
+      "name": "addEvent",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "substract",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "a",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "b",
+          "type": "uint256"
+        }
+      ],
+      "name": "subtractEvent",
+      "type": "event"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.1+commit.c8a2cb62\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"name\",\"outputs\":[{\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"a\",\"type\":\"uint256\"},{\"name\":\"b\",\"type\":\"uint256\"}],\"name\":\"subtract\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"version\",\"outputs\":[{\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"version\",\"type\":\"string\"},{\"name\":\"implementation\",\"type\":\"address\"}],\"name\":\"upgradeTo\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"implementation\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"a\",\"type\":\"uint256\"},{\"name\":\"b\",\"type\":\"uint256\"}],\"name\":\"add\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_name\",\"type\":\"string\"}],\"name\":\"initialize\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"payable\":true,\"stateMutability\":\"payable\",\"type\":\"fallback\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"version\",\"type\":\"string\"},{\"indexed\":true,\"name\":\"implementation\",\"type\":\"address\"}],\"name\":\"Upgraded\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"name\":\"sum\",\"type\":\"uint256\"},{\"indexed\":false,\"name\":\"a\",\"type\":\"uint256\"},{\"indexed\":false,\"name\":\"b\",\"type\":\"uint256\"}],\"name\":\"addEvent\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"name\":\"substract\",\"type\":\"uint256\"},{\"indexed\":false,\"name\":\"a\",\"type\":\"uint256\"},{\"indexed\":false,\"name\":\"b\",\"type\":\"uint256\"}],\"name\":\"subtractEvent\",\"type\":\"event\"}],\"devdoc\":{\"details\":\"This proxy holds the storage of the Arithmetic contract and delegates every call to the current implementation set. Besides, it allows to upgrade the Arithmetic's behaviour towards further implementations, and provides basic authorization control functionalities\",\"methods\":{},\"title\":\"ArithmeticProxy\"},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/lakshmikanth/Documents/DefiZap/Solidity-Eternal-Proxy/contracts/arithmetic/ArithmeticProxy.sol\":\"ArithmeticProxy\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/lakshmikanth/Documents/DefiZap/Solidity-Eternal-Proxy/contracts/arithmetic/Arithmetic.sol\":{\"keccak256\":\"0x2f5c8880fe67afc9025af7eba35bf74fd2a650e0fd9e5d2de3f052b29dd691d7\",\"urls\":[\"bzzr://4aaccbf9aebc711acb383de2e7dcdae8bdc6c83237bf356f516ec771551ff50a\"]},\"/Users/lakshmikanth/Documents/DefiZap/Solidity-Eternal-Proxy/contracts/arithmetic/ArithmeticProxy.sol\":{\"keccak256\":\"0x56b45bf27cc25495d514c26becb6ef4c989bb429b7fa22307baa44eeac5b802f\",\"urls\":[\"bzzr://baa137628e16212bf92b8ac7d4485330a947ea351a8fbe3dd2e019f86c94ec3d\"]},\"/Users/lakshmikanth/Documents/DefiZap/Solidity-Eternal-Proxy/contracts/arithmetic/ArithmeticStorage.sol\":{\"keccak256\":\"0x3412dfe7a5c2bc672ceb921bcb7739c5e993593780fc8ea4e17fd21206c3b874\",\"urls\":[\"bzzr://f1c3ad420f485cf175810483d1bf4f1432a49ba763e5afe411f2924fe53416bf\"]},\"/Users/lakshmikanth/Documents/DefiZap/Solidity-Eternal-Proxy/contracts/proxy/Proxy.sol\":{\"keccak256\":\"0x3d4c2eb6d45517c539fb3e20eb5f56f9ee46a8d2e67abb50c53d20b270be2652\",\"urls\":[\"bzzr://89ac0047bd889b6442a57763f9e1f5f4b636f60abfca6b93330a4a2cc861e181\"]},\"/Users/lakshmikanth/Documents/DefiZap/Solidity-Eternal-Proxy/contracts/proxy/UpgradeabilityProxy.sol\":{\"keccak256\":\"0x5e4ed7d1a8c710de3aac7a7cdb81b826154016343726de9581a29f3d2b104b14\",\"urls\":[\"bzzr://d107ee04b012aab1f5c7f45686d3f65aa0088014850817afde73bd20bbca51f5\"]},\"/Users/lakshmikanth/Documents/DefiZap/Solidity-Eternal-Proxy/contracts/proxy/UpgradeabilityStorage.sol\":{\"keccak256\":\"0x91faeb7983f1af8ebeeec04f46d034c1904c1dd6056e267cdd292687a936e95c\",\"urls\":[\"bzzr://5e1b1583cbddc57b522c1fb005d71b3e91720acb3b7874fbe0b985bc491514bc\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b50610a9e806100206000396000f3fe60806040526004361061007d576000357c01000000000000000000000000000000000000000000000000000000009004806306fdde03146101c55780633ef5e4451461025557806354fd4d50146102ae5780635a8b1a9f1461033e5780635c60da1b14610426578063771602f71461047d578063f62d1888146104d6575b600061008761059e565b9050600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff1614151515610154576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260358152602001807f6f776e65722063616e6e6f742073657420697473656c6620617320746865206981526020017f6d706c656d656e746174696f6e2061646472657373000000000000000000000081525060400191505060405180910390fd5b60606000368080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f82011690508083019250505050505050905060405136600082376000803683865af43d806000843e81600081146101c1578184f35b8184fd5b3480156101d157600080fd5b506101da6105c8565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561021a5780820151818401526020810190506101ff565b50505050905090810190601f1680156102475780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b34801561026157600080fd5b506102986004803603604081101561027857600080fd5b810190808035906020019092919080359060200190929190505050610666565b6040518082815260200191505060405180910390f35b3480156102ba57600080fd5b506102c36106be565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156103035780820151818401526020810190506102e8565b50505050905090810190601f1680156103305780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b34801561034a57600080fd5b506104246004803603604081101561036157600080fd5b810190808035906020019064010000000081111561037e57600080fd5b82018360208201111561039057600080fd5b803590602001918460018302840111640100000000831117156103b257600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f820116905080830192505050505050509192919290803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610760565b005b34801561043257600080fd5b5061043b61059e565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34801561048957600080fd5b506104c0600480360360408110156104a057600080fd5b81019080803590602001909291908035906020019092919050505061095b565b6040518082815260200191505060405180910390f35b3480156104e257600080fd5b5061059c600480360360208110156104f957600080fd5b810190808035906020019064010000000081111561051657600080fd5b82018360208201111561052857600080fd5b8035906020019184600183028401116401000000008311171561054a57600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f8201169050808301925050505050505091929192905050506109b3565b005b6000600460009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905090565b60018054600181600116156101000203166002900480601f01602080910402602001604051908101604052809291908181526020018280546001816001161561010002031660029004801561065e5780601f106106335761010080835404028352916020019161065e565b820191906000526020600020905b81548152906001019060200180831161064157829003601f168201915b505050505081565b60008183036002819055506002547f4169658e71e9bfad250e41631db4a1124384de7cc0d4cdb105d2b08be795439f8484604051808381526020018281526020019250505060405180910390a2600254905092915050565b606060038054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156107565780601f1061072b57610100808354040283529160200191610756565b820191906000526020600020905b81548152906001019060200180831161073957829003601f168201915b5050505050905090565b8073ffffffffffffffffffffffffffffffffffffffff16600460009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff161415151561084c576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252602e8152602001807f63616e6e6f7420757365206578697374696e6720696d706c656d656e7461746981526020017f6f6e20666f72207570677261646500000000000000000000000000000000000081525060400191505060405180910390fd5b81600390805190602001906108629291906109cd565b5080600460006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055508073ffffffffffffffffffffffffffffffffffffffff167f8e05e0e35ff592971ca8b477d4285a33a61ded208d644042667b78693a472f5e836040518080602001828103825283818151815260200191508051906020019080838360005b8381101561091d578082015181840152602081019050610902565b50505050905090810190601f16801561094a5780820380516001836020036101000a031916815260200191505b509250505060405180910390a25050565b60008183016002819055506002547ff639bd6b84a8831cd07b2ac9f171ca968a1ab9f1140b20d178e56810de25b5308484604051808381526020018281526020019250505060405180910390a2600254905092915050565b80600190805190602001906109c99291906109cd565b5050565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f10610a0e57805160ff1916838001178555610a3c565b82800160010185558215610a3c579182015b82811115610a3b578251825591602001919060010190610a20565b5b509050610a499190610a4d565b5090565b610a6f91905b80821115610a6b576000816000905550600101610a53565b5090565b9056fea165627a7a72305820004375064a47dbce1af61d89e9e49e14064aa13a94742672c5ccfdc9a3214a5d0029",
+  "deployedBytecode": "0x60806040526004361061007d576000357c01000000000000000000000000000000000000000000000000000000009004806306fdde03146101c55780633ef5e4451461025557806354fd4d50146102ae5780635a8b1a9f1461033e5780635c60da1b14610426578063771602f71461047d578063f62d1888146104d6575b600061008761059e565b9050600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff1614151515610154576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260358152602001807f6f776e65722063616e6e6f742073657420697473656c6620617320746865206981526020017f6d706c656d656e746174696f6e2061646472657373000000000000000000000081525060400191505060405180910390fd5b60606000368080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f82011690508083019250505050505050905060405136600082376000803683865af43d806000843e81600081146101c1578184f35b8184fd5b3480156101d157600080fd5b506101da6105c8565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561021a5780820151818401526020810190506101ff565b50505050905090810190601f1680156102475780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b34801561026157600080fd5b506102986004803603604081101561027857600080fd5b810190808035906020019092919080359060200190929190505050610666565b6040518082815260200191505060405180910390f35b3480156102ba57600080fd5b506102c36106be565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156103035780820151818401526020810190506102e8565b50505050905090810190601f1680156103305780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b34801561034a57600080fd5b506104246004803603604081101561036157600080fd5b810190808035906020019064010000000081111561037e57600080fd5b82018360208201111561039057600080fd5b803590602001918460018302840111640100000000831117156103b257600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f820116905080830192505050505050509192919290803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610760565b005b34801561043257600080fd5b5061043b61059e565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34801561048957600080fd5b506104c0600480360360408110156104a057600080fd5b81019080803590602001909291908035906020019092919050505061095b565b6040518082815260200191505060405180910390f35b3480156104e257600080fd5b5061059c600480360360208110156104f957600080fd5b810190808035906020019064010000000081111561051657600080fd5b82018360208201111561052857600080fd5b8035906020019184600183028401116401000000008311171561054a57600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f8201169050808301925050505050505091929192905050506109b3565b005b6000600460009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905090565b60018054600181600116156101000203166002900480601f01602080910402602001604051908101604052809291908181526020018280546001816001161561010002031660029004801561065e5780601f106106335761010080835404028352916020019161065e565b820191906000526020600020905b81548152906001019060200180831161064157829003601f168201915b505050505081565b60008183036002819055506002547f4169658e71e9bfad250e41631db4a1124384de7cc0d4cdb105d2b08be795439f8484604051808381526020018281526020019250505060405180910390a2600254905092915050565b606060038054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156107565780601f1061072b57610100808354040283529160200191610756565b820191906000526020600020905b81548152906001019060200180831161073957829003601f168201915b5050505050905090565b8073ffffffffffffffffffffffffffffffffffffffff16600460009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff161415151561084c576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252602e8152602001807f63616e6e6f7420757365206578697374696e6720696d706c656d656e7461746981526020017f6f6e20666f72207570677261646500000000000000000000000000000000000081525060400191505060405180910390fd5b81600390805190602001906108629291906109cd565b5080600460006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055508073ffffffffffffffffffffffffffffffffffffffff167f8e05e0e35ff592971ca8b477d4285a33a61ded208d644042667b78693a472f5e836040518080602001828103825283818151815260200191508051906020019080838360005b8381101561091d578082015181840152602081019050610902565b50505050905090810190601f16801561094a5780820380516001836020036101000a031916815260200191505b509250505060405180910390a25050565b60008183016002819055506002547ff639bd6b84a8831cd07b2ac9f171ca968a1ab9f1140b20d178e56810de25b5308484604051808381526020018281526020019250505060405180910390a2600254905092915050565b80600190805190602001906109c99291906109cd565b5050565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f10610a0e57805160ff1916838001178555610a3c565b82800160010185558215610a3c579182015b82811115610a3b578251825591602001919060010190610a20565b5b509050610a499190610a4d565b5090565b610a6f91905b80821115610a6b576000816000905550600101610a53565b5090565b9056fea165627a7a72305820004375064a47dbce1af61d89e9e49e14064aa13a94742672c5ccfdc9a3214a5d0029",
+  "sourceMap": "410:67:5:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;410:67:5;;;;;;;",
+  "deployedSourceMap": "410:67:5:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;138:13:7;154:16;:14;:16::i;:::-;138:32;;201:1;184:19;;:5;:19;;;;176:84;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;266:17;286:8;;266:28;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;30:3:-1;22:6;14;1:33;99:1;93:3;85:6;81:16;74:27;137:4;133:9;126:4;121:3;117:14;113:30;106:37;;169:3;161:6;157:16;147:26;;266:28:7;;;;;;;;334:4;328:11;405:12;402:1;397:3;384:34;531:1;528;514:12;509:3;502:5;497:3;484:49;552:14;631:4;628:1;623:3;608:28;699:6;717:1;712:28;;;;769:4;764:3;757:17;712:28;733:4;728:3;721:17;246:18:4;;8:9:-1;5:2;;;30:1;27;20:12;5:2;246:18:4;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;246:18:4;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;537:156;;8:9:-1;5:2;;;30:1;27;20:12;5:2;537:156:4;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;537:156:4;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;132:85:9;;8:9:-1;5:2;;;30:1;27;20:12;5:2;132:85:9;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;132:85:9;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;217:282:8;;8:9:-1;5:2;;;30:1;27;20:12;5:2;217:282:8;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;217:282:8;;;;;;;;;;21:11:-1;8;5:28;2:2;;;46:1;43;36:12;2:2;217:282:8;;35:9:-1;28:4;12:14;8:25;5:40;2:2;;;58:1;55;48:12;2:2;217:282:8;;;;;;100:9:-1;95:1;81:12;77:20;67:8;63:35;60:50;39:11;25:12;22:29;11:107;8:2;;;131:1;128;121:12;8:2;217:282:8;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;30:3:-1;22:6;14;1:33;99:1;93:3;85:6;81:16;74:27;137:4;133:9;126:4;121:3;117:14;113:30;106:37;;169:3;161:6;157:16;147:26;;217:282:8;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;223:93:9;;8:9:-1;5:2;;;30:1;27;20:12;5:2;223:93:9;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;385:146:4;;8:9:-1;5:2;;;30:1;27;20:12;5:2;385:146:4;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;385:146:4;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;301:78;;8:9:-1;5:2;;;30:1;27;20:12;5:2;301:78:4;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;301:78:4;;;;;;;;;;21:11:-1;8;5:28;2:2;;;46:1;43;36:12;2:2;301:78:4;;35:9:-1;28:4;12:14;8:25;5:40;2:2;;;58:1;55;48:12;2:2;301:78:4;;;;;;100:9:-1;95:1;81:12;77:20;67:8;63:35;60:50;39:11;25:12;22:29;11:107;8:2;;;131:1;128;121:12;8:2;301:78:4;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;30:3:-1;22:6;14;1:33;99:1;93:3;85:6;81:16;74:27;137:4;133:9;126:4;121:3;117:14;113:30;106:37;;169:3;161:6;157:16;147:26;;301:78:4;;;;;;;;;;;;;;;:::i;:::-;;223:93:9;269:7;294:15;;;;;;;;;;;287:22;;223:93;:::o;246:18:4:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;537:156::-;592:7;622:1;620;:3;611:6;:12;;;;652:6;;638:25;659:1;661;638:25;;;;;;;;;;;;;;;;;;;;;;;;680:6;;673:13;;537:156;;;;:::o;132:85:9:-;171:13;202:8;195:15;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;132:85;:::o;217:282:8:-;323:14;304:33;;:15;;;;;;;;;;;:33;;;;296:92;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;405:7;394:8;:18;;;;;;;;;;;;:::i;:::-;;436:14;418:15;;:32;;;;;;;;;;;;;;;;;;479:14;461:33;;;470:7;461:33;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;461:33:8;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;217:282;;:::o;385:146:4:-;435:7;465:1;463;:3;454:6;:12;;;;490:6;;481:20;497:1;499;481:20;;;;;;;;;;;;;;;;;;;;;;;;518:6;;511:13;;385:146;;;;:::o;301:78::-;367:5;360:4;:12;;;;;;;;;;;;:::i;:::-;;301:78;:::o;410:67:5:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity ^0.5.1;\n\nimport './Arithmetic.sol';\nimport '../proxy/UpgradeabilityProxy.sol';\n\n/**\n * @title ArithmeticProxy\n * @dev This proxy holds the storage of the Arithmetic contract and\n * delegates every call to the current implementation set.\n * Besides, it allows to upgrade the Arithmetic's behaviour towards further implementations,\n * and provides basic authorization control functionalities\n */\ncontract ArithmeticProxy is Arithmetic, UpgradeabilityProxy {\n\n  \n}",
+  "sourcePath": "/Users/lakshmikanth/Documents/DefiZap/Solidity-Eternal-Proxy/contracts/arithmetic/ArithmeticProxy.sol",
+  "ast": {
+    "absolutePath": "/Users/lakshmikanth/Documents/DefiZap/Solidity-Eternal-Proxy/contracts/arithmetic/ArithmeticProxy.sol",
+    "exportedSymbols": {
+      "ArithmeticProxy": [
+        213
+      ]
+    },
+    "id": 214,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 206,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".1"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:5"
+      },
+      {
+        "absolutePath": "/Users/lakshmikanth/Documents/DefiZap/Solidity-Eternal-Proxy/contracts/arithmetic/Arithmetic.sol",
+        "file": "./Arithmetic.sol",
+        "id": 207,
+        "nodeType": "ImportDirective",
+        "scope": 214,
+        "sourceUnit": 205,
+        "src": "25:26:5",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/lakshmikanth/Documents/DefiZap/Solidity-Eternal-Proxy/contracts/proxy/UpgradeabilityProxy.sol",
+        "file": "../proxy/UpgradeabilityProxy.sol",
+        "id": 208,
+        "nodeType": "ImportDirective",
+        "scope": 214,
+        "sourceUnit": 294,
+        "src": "52:42:5",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 209,
+              "name": "Arithmetic",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 204,
+              "src": "438:10:5",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Arithmetic_$204",
+                "typeString": "contract Arithmetic"
+              }
+            },
+            "id": 210,
+            "nodeType": "InheritanceSpecifier",
+            "src": "438:10:5"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 211,
+              "name": "UpgradeabilityProxy",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 293,
+              "src": "450:19:5",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_UpgradeabilityProxy_$293",
+                "typeString": "contract UpgradeabilityProxy"
+              }
+            },
+            "id": 212,
+            "nodeType": "InheritanceSpecifier",
+            "src": "450:19:5"
+          }
+        ],
+        "contractDependencies": [
+          204,
+          218,
+          250,
+          293,
+          316
+        ],
+        "contractKind": "contract",
+        "documentation": "@title ArithmeticProxy\n@dev This proxy holds the storage of the Arithmetic contract and\ndelegates every call to the current implementation set.\nBesides, it allows to upgrade the Arithmetic's behaviour towards further implementations,\nand provides basic authorization control functionalities",
+        "fullyImplemented": true,
+        "id": 213,
+        "linearizedBaseContracts": [
+          213,
+          293,
+          316,
+          250,
+          204,
+          218
+        ],
+        "name": "ArithmeticProxy",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 214,
+        "src": "410:67:5"
+      }
+    ],
+    "src": "0:477:5"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/lakshmikanth/Documents/DefiZap/Solidity-Eternal-Proxy/contracts/arithmetic/ArithmeticProxy.sol",
+    "exportedSymbols": {
+      "ArithmeticProxy": [
+        213
+      ]
+    },
+    "id": 214,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 206,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".1"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:5"
+      },
+      {
+        "absolutePath": "/Users/lakshmikanth/Documents/DefiZap/Solidity-Eternal-Proxy/contracts/arithmetic/Arithmetic.sol",
+        "file": "./Arithmetic.sol",
+        "id": 207,
+        "nodeType": "ImportDirective",
+        "scope": 214,
+        "sourceUnit": 205,
+        "src": "25:26:5",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/lakshmikanth/Documents/DefiZap/Solidity-Eternal-Proxy/contracts/proxy/UpgradeabilityProxy.sol",
+        "file": "../proxy/UpgradeabilityProxy.sol",
+        "id": 208,
+        "nodeType": "ImportDirective",
+        "scope": 214,
+        "sourceUnit": 294,
+        "src": "52:42:5",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 209,
+              "name": "Arithmetic",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 204,
+              "src": "438:10:5",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Arithmetic_$204",
+                "typeString": "contract Arithmetic"
+              }
+            },
+            "id": 210,
+            "nodeType": "InheritanceSpecifier",
+            "src": "438:10:5"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 211,
+              "name": "UpgradeabilityProxy",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 293,
+              "src": "450:19:5",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_UpgradeabilityProxy_$293",
+                "typeString": "contract UpgradeabilityProxy"
+              }
+            },
+            "id": 212,
+            "nodeType": "InheritanceSpecifier",
+            "src": "450:19:5"
+          }
+        ],
+        "contractDependencies": [
+          204,
+          218,
+          250,
+          293,
+          316
+        ],
+        "contractKind": "contract",
+        "documentation": "@title ArithmeticProxy\n@dev This proxy holds the storage of the Arithmetic contract and\ndelegates every call to the current implementation set.\nBesides, it allows to upgrade the Arithmetic's behaviour towards further implementations,\nand provides basic authorization control functionalities",
+        "fullyImplemented": true,
+        "id": 213,
+        "linearizedBaseContracts": [
+          213,
+          293,
+          316,
+          250,
+          204,
+          218
+        ],
+        "name": "ArithmeticProxy",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 214,
+        "src": "410:67:5"
+      }
+    ],
+    "src": "0:477:5"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.1+commit.c8a2cb62.Linux.g++"
+  },
+  "networks": {
+    "1575401057260": {
+      "events": {
+        "0x8e05e0e35ff592971ca8b477d4285a33a61ded208d644042667b78693a472f5e": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "version",
+              "type": "string"
+            },
+            {
+              "indexed": true,
+              "name": "implementation",
+              "type": "address"
+            }
+          ],
+          "name": "Upgraded",
+          "type": "event",
+          "signature": "0x8e05e0e35ff592971ca8b477d4285a33a61ded208d644042667b78693a472f5e"
+        },
+        "0xf639bd6b84a8831cd07b2ac9f171ca968a1ab9f1140b20d178e56810de25b530": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "sum",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "a",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "b",
+              "type": "uint256"
+            }
+          ],
+          "name": "addEvent",
+          "type": "event",
+          "signature": "0xf639bd6b84a8831cd07b2ac9f171ca968a1ab9f1140b20d178e56810de25b530"
+        },
+        "0x4169658e71e9bfad250e41631db4a1124384de7cc0d4cdb105d2b08be795439f": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "substract",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "a",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "b",
+              "type": "uint256"
+            }
+          ],
+          "name": "subtractEvent",
+          "type": "event",
+          "signature": "0x4169658e71e9bfad250e41631db4a1124384de7cc0d4cdb105d2b08be795439f"
+        }
+      },
+      "links": {},
+      "address": "0xe9611361471Ebe236C4e0789aF6565C8C8E602BE",
+      "transactionHash": "0x244788d4d7055b502a0c11b0eadc3f2ccb0957b8fcd250b8a607e1d42d1be6f6"
+    }
+  },
+  "schemaVersion": "3.0.18",
+  "updatedAt": "2019-12-03T19:29:15.837Z",
+  "networkType": "ethereum",
+  "devdoc": {
+    "details": "This proxy holds the storage of the Arithmetic contract and delegates every call to the current implementation set. Besides, it allows to upgrade the Arithmetic's behaviour towards further implementations, and provides basic authorization control functionalities",
+    "methods": {},
+    "title": "ArithmeticProxy"
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

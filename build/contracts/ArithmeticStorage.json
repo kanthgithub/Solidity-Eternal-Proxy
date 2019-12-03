@@ -1,0 +1,158 @@
+{
+  "contractName": "ArithmeticStorage",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.1+commit.c8a2cb62\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/lakshmikanth/Documents/DefiZap/Solidity-Eternal-Proxy/contracts/arithmetic/ArithmeticStorage.sol\":\"ArithmeticStorage\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/lakshmikanth/Documents/DefiZap/Solidity-Eternal-Proxy/contracts/arithmetic/ArithmeticStorage.sol\":{\"keccak256\":\"0x3412dfe7a5c2bc672ceb921bcb7739c5e993593780fc8ea4e17fd21206c3b874\",\"urls\":[\"bzzr://f1c3ad420f485cf175810483d1bf4f1432a49ba763e5afe411f2924fe53416bf\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603580601d6000396000f3fe6080604052600080fdfea165627a7a72305820ef87d0c6a5cf7c1c86536b518b5bae73becb74cffb9638ac79cc451990c48aff0029",
+  "deployedBytecode": "0x6080604052600080fdfea165627a7a72305820ef87d0c6a5cf7c1c86536b518b5bae73becb74cffb9638ac79cc451990c48aff0029",
+  "sourceMap": "25:58:6:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;25:58:6;;;;;;;",
+  "deployedSourceMap": "25:58:6:-;;;;;",
+  "source": "pragma solidity ^0.5.1;\n\ncontract ArithmeticStorage {\n    uint256 private result;\n}",
+  "sourcePath": "/Users/lakshmikanth/Documents/DefiZap/Solidity-Eternal-Proxy/contracts/arithmetic/ArithmeticStorage.sol",
+  "ast": {
+    "absolutePath": "/Users/lakshmikanth/Documents/DefiZap/Solidity-Eternal-Proxy/contracts/arithmetic/ArithmeticStorage.sol",
+    "exportedSymbols": {
+      "ArithmeticStorage": [
+        218
+      ]
+    },
+    "id": 219,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 215,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".1"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:6"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 218,
+        "linearizedBaseContracts": [
+          218
+        ],
+        "name": "ArithmeticStorage",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 217,
+            "name": "result",
+            "nodeType": "VariableDeclaration",
+            "scope": 218,
+            "src": "58:22:6",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 216,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "58:7:6",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "private"
+          }
+        ],
+        "scope": 219,
+        "src": "25:58:6"
+      }
+    ],
+    "src": "0:83:6"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/lakshmikanth/Documents/DefiZap/Solidity-Eternal-Proxy/contracts/arithmetic/ArithmeticStorage.sol",
+    "exportedSymbols": {
+      "ArithmeticStorage": [
+        218
+      ]
+    },
+    "id": 219,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 215,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".1"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:6"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 218,
+        "linearizedBaseContracts": [
+          218
+        ],
+        "name": "ArithmeticStorage",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 217,
+            "name": "result",
+            "nodeType": "VariableDeclaration",
+            "scope": 218,
+            "src": "58:22:6",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 216,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "58:7:6",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "private"
+          }
+        ],
+        "scope": 219,
+        "src": "25:58:6"
+      }
+    ],
+    "src": "0:83:6"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.1+commit.c8a2cb62.Linux.g++"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.18",
+  "updatedAt": "2019-12-03T19:24:37.356Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
