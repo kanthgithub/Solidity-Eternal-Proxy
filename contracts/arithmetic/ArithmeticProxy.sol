@@ -10,7 +10,4 @@ import '../proxy/UpgradeabilityProxy.sol';
  * Besides, it allows to upgrade the Arithmetic's behaviour towards further implementations,
  * and provides basic authorization control functionalities
  */
-contract ArithmeticProxy is Arithmetic, UpgradeabilityProxy {
-
-  
-}
+contract ArithmeticProxy is Arithmetic, UpgradeabilityProxy {}

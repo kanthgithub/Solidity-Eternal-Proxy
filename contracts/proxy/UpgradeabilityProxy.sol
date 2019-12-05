@@ -11,4 +11,9 @@ contract UpgradeabilityProxy is Proxy, UpgradeabilityStorage {
     _implementation = implementation;
     emit Upgraded(version, implementation);
   }
+
+  function getImplementation() public view returns(address){
+    return implementation();
+  }
+
 }
