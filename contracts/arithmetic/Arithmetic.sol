@@ -1,8 +1,8 @@
 pragma solidity ^0.5.1;
 
-import './ArithmeticStorage.sol';
+import './UpgradeableArithmeticStorage.sol';
 
-contract Arithmetic is ArithmeticStorage {
+contract Arithmetic is UpgradeableArithmeticStorage {
 
     event addEvent(uint256 indexed sum, uint256 a, uint256 b);
     event subtractEvent(uint256 indexed substract, uint256 a, uint256 b);
@@ -15,6 +15,7 @@ contract Arithmetic is ArithmeticStorage {
     function add(uint256 a, uint256 b) public returns(uint256) {
         uint256 result = a+b;
         resultArray.push(result);
+        resultmap['add'] = result;
         emit addEvent(result,a,b);
         return result;
     }
@@ -22,6 +23,7 @@ contract Arithmetic is ArithmeticStorage {
     function subtract(uint256 a, uint256 b) public returns(uint256) {
         uint256 result = a-b;
         resultArray.push(result);
+        resultmap['subtract'] = result;
         emit subtractEvent(result,a,b);
         return result;
     }
@@ -30,6 +32,7 @@ contract Arithmetic is ArithmeticStorage {
     function div(uint256 a, uint256 b) public returns(uint256) {
         uint256 result = a/b;
         resultArray.push(result);
+        resultmap['div'] = result;
         return result;
     }
 
@@ -37,18 +40,25 @@ contract Arithmetic is ArithmeticStorage {
     function multiply(uint256 a, uint256 b) public returns(uint256) {
         uint256 result = a*b;
         resultArray.push(result);
+        resultmap['multiply'] = result;
         return result;
     }
 
 
-    function doubleAdd(uint256 a, uint256 b) public returns(uint256) {
+    function doubleAdder(uint256 a, uint256 b) public returns(uint256) {
         uint256 result = 2*(a+b);
         resultArray.push(result);
+        resultmap['doubleAdder'] = result;
         return result;
     }
 
 
     function getResult() public view returns(uint256[] memory){
         return resultArray;
+    }
+
+
+    function getResultFromMap(string memory action) public view returns(uint256){
+        return resultmap[action];
     }
 }
